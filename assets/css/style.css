@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
+
+/* VARIABLES */
+:root {
+  /* Colors */
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated: hsl(229, 23%, 23%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --card-bg: #ffffff;
+  --trans: all 0.3s linear;
+
+  /* Fonts */
+  --body-font-family: "Kumbh Sans", sans-serif;
+  --font-wght-700: 700;
+  --font-wght-400: 400;
+}
+
+/* GENERAL CSS */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font-family);
+  background-color: var(--dark-cyan);
+}
+
+.profile__component {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.positions {
+  position: absolute;
+}
+
+.top-left__img {
+  max-width: 47rem;
+  top: -40%;
+  left: -5%;
+}
+
+.bottom-right__img {
+  max-width: 54rem;
+  right: -12%;
+  bottom: -70%;
+}
+
+.profile__card {
+  width: 22.5rem;
+  background-color: var(--card-bg);
+  border-radius: 0.8rem;
+  padding-bottom: 1rem;
+  z-index: 1;
+}
+
+.card__head {
+  position: relative;
+}
+
+.profile-bg__img {
+  width: 100%;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+}
+
+.profile__img {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  border: 0.4rem solid #fff;
+}
+
+.card__main {
+  text-align: center;
+  line-height: 0.8rem;
+}
+
+.profile__name {
+  padding-top: 3.4rem;
+  color: var(--very-dark-desaturated);
+  font-size: 1.4rem;
+}
+
+.name__span {
+  color: var(--dark-gray);
+  font-weight: var(--font-wght-400);
+}
+
+.profile__city {
+  color: var(--dark-gray);
+  padding-bottom: 0.7rem;
+}
+
+.card__footer {
+  border-top: 1px solid #ccc;
+  padding-top: 1.8rem;
+}
+
+.profile__ratings {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.profile__ratings div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.status {
+  font-size: 1.2rem;
+  color: var(--very-dark-desaturated);
+  font-weight: var(--font-wght-700);
+}
+
+.str {
+  color: var(--dark-gray);
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+}
+
+@media only screen and (max-width: 375px) {
+  html {
+    font-size: 80%;
+  }
+
+  .profile__card {
+    width: 90%;
+  }
+}
